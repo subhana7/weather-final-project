@@ -44,14 +44,19 @@ li {
 
 .weather-temperature strong {
     color: rgb (33, 33, 33);
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 400PX;
-    line-height: 1;
+    line-height: 56px;
 }
 
 .weather-temperature units {
     position: relative;
     font-size: 16px;
     top: -32px;
+}
+
+.footer {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
