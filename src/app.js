@@ -4,7 +4,7 @@ let hours = date.getHours();
 if (hours < 10) {
     hours = `0{hours}` ;
 }
-let minutes = data.getMinutes();
+let minutes = date.getMinutes();
 if (minutes < 10) {
     minutes = `0${minutes}`;
 }
@@ -28,10 +28,13 @@ function showTemperature(response) {
     windElement.innerHTML = Math.round(response.data.wind.speed);
     let dateElement = document.querySelector("#date");
     dateElement.innerHTML = FormatDate(response.data.dt*1000);
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "2ff29bed3181c3526c35cc5408037f85";
-let city = "toronto";
+let city = "toronto"
 let units = "metric"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(showTemperature);
