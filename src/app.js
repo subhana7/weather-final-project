@@ -21,7 +21,7 @@ function showTemperature(response) {
     let descriptionElement = document.querySelector("#description");
     descriptionElement.innerHTML = response.data.weather[0].description;
     let tempElement = document.querySelector("#temp");
-    let celsiusTemperature = response.data.main.temp;
+     celsiusTemperature = response.data.main.temp;
     tempElement.innerHTML = Math.round(celsiusTemperature);
     let humidityElement = document.querySelector("#humidity");
     humidityElement.innerHTML = response.data.main.humidity;
@@ -49,6 +49,8 @@ function currentSearch(event) {
 
 function displayFahenheitTemperature(event) {
     event.preventDefault();
+    celsiusLink.classList.remove("active");
+    fahrenheiLink.classList.add("active");
     let tempElement = document.querySelector("#temp");
     let fahrenheiTemperature = (celsiusTemperature * 9)/5 + 32;
     tempElement.innerHTML = Math.round(fahrenheiTemperature);
@@ -56,6 +58,8 @@ function displayFahenheitTemperature(event) {
 
 function displayCelsiusTemperature(event){
     event.preventDefault();
+    fahrenheiLink.classList.remove("active");
+    celsiusLink.classList.add("active");
     let tempElement = document.querySelector("#temp");
     tempElement.innerHTML = Math.round(celsiusTemperature);
 }
