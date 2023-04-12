@@ -77,3 +77,21 @@ li:first-letter {
 .fahren {
   text-decoration: none;
 }
+
+.weather-forcast {
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.Weather-forcast-date {
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.Weather-forcast-temperature{
+    font-size: 13px;
+}
+.weather-forcast-min {
+    opacity: 0.5;
+}
