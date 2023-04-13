@@ -17,7 +17,7 @@ return `${day} ${hours}:${minutes}`;
 function displayForcast() {
     let forcastElement = document.querySelector("#forcast");
 
-    let days = ["tue", "wed", "thur", "fri", "sat", "sun"];
+    let days = ["tue", "wed", "thu", "fri", "sat", "sun"];
     let forcastHTML = `<div class="row">`;
     
     days.forEach(function (day) {
