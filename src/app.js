@@ -14,6 +14,31 @@ return `${day} ${hours}:${minutes}`;
 }
 
 
+function displayForcast() {
+    let forcastElement = document.querySelector("#forcast");
+
+    let days = ["tue", "wed", "thur", "fri", "sat", "sun"];
+    let forcastHTML = `<div class="row">`;
+    
+    days.forEach(function (day) {
+    forcastHTML = forcastHTML + `
+    <div class="col-2">
+    <div class="Weather-forcast-date">${day}</div>
+     <img src="http://openweathermap.org/img/wn/03n@2x.png" 
+     alt=""
+     width="45"
+     />
+    <div class="Weather-forcast-temperature">
+     <span class="weather-forcast-max">24&#176</span> <span class="weather-forcast-min">9&#176</span>
+    </div>
+    </div>
+    `;
+});
+    forcastHTML = forcastHTML + `</div>`;
+    forcastElement.innerHTML = forcastHTML;
+}
+
+
 function showTemperature(response) {
     console.log(response);
     let city = document.querySelector("#city");
@@ -78,3 +103,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("toronto");
+displayForcast();
