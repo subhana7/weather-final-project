@@ -70,13 +70,6 @@ li:first-letter {
     text-decoration: none;
 }
 
-.weather-temperature.active.hover {
-    text-decoration: none;
-}
-
-.fahren {
-  text-decoration: none;
-}
 
 .weather-forcast {
     margin-top: 20px;
