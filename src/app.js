@@ -49,7 +49,7 @@ function displayForcast(response) {
 
 function getforecast(coordinates) {
     console.log(coordinates);
-    apiKey = "2ff29bed3181c3526c35cc5408037f85";
+    apiKey = "9c37ab9fa36516481c5970a9fe2db0eb";
     apiUrl =`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayForcast);
 }
@@ -77,7 +77,7 @@ function showTemperature(response) {
 }
 
 function search(city) {
-let apiKey = "2ff29bed3181c3526c35cc5408037f85";
+let apiKey = "9c37ab9fa36516481c5970a9fe2db0eb";
 let units = "metric"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(showTemperature);
@@ -94,7 +94,5 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", currentSearch);
 
 let celsiusTemperature = null;
-
-
 
 search("toronto");
